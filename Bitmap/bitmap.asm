@@ -5,7 +5,7 @@
 //
 //       Compile using KickAssembler v5.19 by Mads Nielsen
 
-.const SCREEN_RAM = $0400         // SCREEN RAM is stored at $C000 - $07FF if we used VIC-II bank #3
+.const SCREEN_RAM = $0400         // SCREEN RAM is stored at $0400 - $07FF if VIC-II bank #0 is used
 .const COLOR_RAM = $D800          // COLOR RAM is stored at $D800 - $DBFF
 
 .const KLA_CHARS = $3f40          // Address where characters are stored in the HKU logo PRG (Koala img)
