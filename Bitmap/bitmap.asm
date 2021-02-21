@@ -29,7 +29,7 @@ main:
 
   ldx #$00
   ldy #$00
-  lda #music.startSong - 1        // Set the default (stating) song
+  lda #music.startSong - 1        // Set the default (starting) song
   jsr music.init                  // Kick Assembler script
 
   sei                             // Disable interrupt so we can bank out ROM and setup IEQ handler
