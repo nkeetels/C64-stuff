@@ -36,7 +36,7 @@ main:
 
   lda #<IRQ                       // Get low-byte of IRQ handler address
   sta $0314                       // Set interrupt vector
-  lda #>IRQ                       // Get high-byte of IEQ handler address
+  lda #>IRQ                       // Get high-byte of IRQ handler address
   sta $0315                       // Set interrupt vector
   asl $D019                       // Clear interrupt flag
   lda #%01111011                  // Enable all interrupt controls except TOD alarm
