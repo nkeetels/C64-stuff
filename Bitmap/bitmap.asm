@@ -20,10 +20,8 @@
 BasicUpstart2(main)               // Kick Assembler macro that inserts the sys-line into the program
 
 main:
-// Since twp effects of this demo utilize character-mode graphics the obvious VIC-II bank choices are 
-// bank #0 and bank #3 because those feature character-generator ROM aat $1000 and $9000. Personally I'm not 
-// familiar enough with C64 programming to have a preference for one bank over another. I'm just going with 
-// the default VIC-II bank 0 which affords 16K ranging from $0000 - $3FFF.
+// Personally I'm not familiar enough with C64 programming to have a preference for one VIC-II bank over another. 
+// I'm just going with the default VIC-II bank 0 which affords 16K ranging from $0000 - $3FFF.
 
   lda #$00                        // #$00 is the color black
   sta $D020                       // $D020 is the border color VIC-II address
