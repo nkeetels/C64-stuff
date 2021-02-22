@@ -21,7 +21,7 @@ BasicUpstart2(main)               // Kick Assembler macro that inserts the sys-l
 
 main:
 // Personally I'm not familiar enough with C64 programming to have a preference for one VIC-II bank over another. 
-// I'm just going with the default VIC-II bank 0 which affords 16K ranging from $0000 - $3FFF.
+// I'm just going with the default VIC-II bank 0.
 
   lda #$00                        // #$00 is the color black
   sta $D020                       // $D020 is the border color VIC-II address
@@ -32,7 +32,7 @@ main:
   lda #music.startSong - 1        // Set the default (starting) song
   jsr music.init                  // Kick Assembler script
 
-  sei                             // Disable interrupt so we can bank out ROM and setup IEQ handler
+  sei                             // Disable interrupt so we can setup IEQ handler
 
   lda #<IRQ                       // Get low-byte of IRQ handler address
   sta $0314                       // Set interrupt vector
