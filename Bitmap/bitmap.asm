@@ -97,7 +97,7 @@ main_loop:
   bne !waitvblank-                // Note: this is a temporary solution, should be handled by IRQ
 
   jmp main_loop  
-  rts                             // enf-of-program
+  rts                             // end-of-program
 
 IRQ:
   asl $D019                       // Acknowledge interrupt by clearing the interrupt flag
